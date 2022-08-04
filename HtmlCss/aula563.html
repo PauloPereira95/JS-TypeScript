@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas e nav</title>
+
+    <style>
+        *{
+           margin:0;
+           padding:0; 
+        }
+        nav{
+            background:rgb(0, 0, 0,0.5);
+
+        }
+        nav a {
+            color: aquamarine;
+            text-decoration: none;
+            font-family:sans-serif;
+            padding: 10PX 20px ;
+            display: block;
+            text-transform: uppercase;
+        }
+        nav a:hover{
+            background: rgb(0, 0, 0,0.3);
+        }
+        nav{
+            display: flex;
+            align-items: center;
+        }
+        nav ul {
+            display:flex;
+            list-style:none;
+            margin-left: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <aside>
+
+    
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PRODUTS</a></li>
+            </ul>
+        </nav>
+        <ul> <!-- LISTA NAO ORDERNADA -->
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <ol type="A" start="1"> <!--start comeca em que numero ou letra--> <!--A\a\i\1 --> <!-- LISTA ORDERNADA -->
+            <li>a</li>
+            <li>e</li>
+            <li>i</li>
+        </ol>
+        <dl>cafe</dl>
+        <dd>bebida quente escura </dd>
+        <p>Lorem ipsum dolor <a href="#" style="display: block; background: red;;">sitas</a> laboriosam.</p>
+    </aside>
+</body>
+</html>
