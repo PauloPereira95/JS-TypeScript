@@ -9,37 +9,171 @@
         body{
             font-family: sans-serif;
         }
-        table{
-            border-collapse:collapse;
-            width: 800px;
+        label{
+            cursor: pointer;  
         }
-        table td, table th{
-            border:1px solid #ccc;
-            padding:5px;
-            text-align: left;
-        }
-        table caption{
-            caption-side: bottom;
-            
-            font-style: italic;
-            font-size: 14px;
-            margin-bottom: 5px 0;
-        }
-        tfoot td, table th{
-            background: #ddd;
-        }
-        tfoot td{
-            font-style: italic;
-        }
-        .responsive-table{
-            max-width: 100%;
-            overflow-x: auto;
-           
-        }
+        
     </style>
 
 </head>
 <body>
-    
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <p>Formulario</p>
+        <!--
+        <p>
+        
+            --------- OU ----------------
+            <label>Nome:
+                <input type="text" id="nome" name="nome" placeholder=" O seu nome....">
+            </label>
+            </p>
+        -->
+        <p>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" placeholder=" O seu nome...." required>
+            <br>
+        </p>
+        <p>
+            <label for="dev">Sou um dev</label>
+            <input type="checkbox" id="dev1" name="dev1" value="sim" checked>
+            <br>
+        </p>
+        <p>
+            <label for="dev">Sou um dev</label>
+            <input type="checkbox" id="dev2" name="dev2" value="sim">
+            <br>
+        </p>
+        <p>
+            <label for="dev">Sou um dev</label>
+            <input type="checkbox" id="dev3" name="dev3" value="sim">
+            <br>
+        </p>
+        <p>
+            Genero:<br>
+            <label for="feminino">feminino:</label>
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <br>
+        </p>
+        <p>
+            <label for="masculino">masculino</label>
+            <input type="radio" id="masculino" name="genero" value="masculino"checked>
+            <br>
+        </p>
+        <p>
+            <label for="outro">outro</label>
+            <input type="radio" id="outro" name="genero" value="outro">
+            <br>
+        </p>
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" value="2020-12-03">
+        <p>
+        <label for="datetime">Date Time:</label>
+        <input type="datetime-local " id="datetime" name="datetime" value="2020-04-20">
+        </p>
+        <p>    
+        <label for="time">Tempo:</label>
+        <input type="time" id="time" name="time" value="20:00:01"> <!--O VALUE É OPCIONAL-->
+        </p>
+        <p>
+        <label>Cor Preferida</label>
+        <input type="color" id="cor" name="cor">
+        <p>
+        <lable for="email">Seu e-mail:</lable>
+        <input type="email" id="email" name="email" placeholder="ex.:email@email.com">
+        </p>
+        <p>
+        <label for="file">Arquivo</label>
+        <input type="file" id="file" name="file" accept=".png,.svg,image/*" multiple > <!--accpet,multipe é opecional-->
+        </p>
+        <p>
+        <label for="Number">Number</label>
+        <input type="number" id="number" name="number" min="10" max="50" step="2">
+        </p>
+        <p>
+        <label for="pass">Password</label>
+        <input type="password" id="password" name="password">
+        </p>
+        <p>
+            <label for="range">Range:</label>
+            <input type="range" id="range" name="range" min="0" max="10" step="2" list="tickmarks">
+        </p>
+        <input type="range" list="tickmarks">
+        <datalist id="tickmarks">
+        <option value="0" label="0%"></option>
+        <option value="10"></option>
+        <option value="20"></option>
+        <option value="30"></option>
+        <option value="40"></option>
+        <option value="50" label="50%"></option>
+        <option value="60"></option>
+        <option value="70"></option>
+        <option value="80"></option>
+        <option value="90"></option>
+        <option value="100" label="100%"></option>
+        </datalist>
+        <p>
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url" placeholder="URL">
+        </p>
+        <p>
+            <label for="search">Input Search</label>
+            <input type="search" id="search" name="search"> 
+        </p>
+        <p>
+             <label id="select">Selecione Uma Opcao</label>
+             <select id="select" name="select">
+                <optgroup label="Teste">
+                <option value="qualquer 1" label="label 1">
+                <option value="qualquer 2" label="label 2">
+                <option value="qualquer 3" label="label 3" disabled>
+                <option value="qualuqer 4" label="label 4">
+                <option value="qualquer 5" label="label 5">
+                <option value="qualquer 6" label="label 6">
+                </optgroup>
+                <optgroup label="Teste">
+                    <option value="qualquer 1" label="label 1">
+                    <option value="qualquer 2" label="label 2">
+                    <option value="qualquer 3" label="label 3" disabled>
+                    <option value="qualuqer 4" label="label 4">
+                    <option value="qualquer 5" label="label 5">
+                    <option value="qualquer 6" label="label 6">
+                    </optgroup>
+             </select>
+             <p>
+             <label id="select2">Selecione Uma Opcao</label>
+             <select id="select2" name="select" multiple>
+                <optgroup label="Teste">
+                <option value="qualquer 1" label="label 1">
+                <option value="qualquer 2" label="label 2">
+                <option value="qualquer 3" label="label 3" disabled>
+                <option value="qualuqer 4" label="label 4">
+                <option value="qualquer 5" label="label 5">
+                <option value="qualquer 6" label="label 6">
+                </optgroup>
+                <optgroup label="Teste2">
+                    <option value="qualquer 1" label="label 1">
+                    <option value="qualquer 2" label="label 2">
+                    <option value="qualquer 3" label="label 3" disabled>
+                    <option value="qualuqer 4" label="label 4">
+                    <option value="qualquer 5" label="label 5">
+                    <option value="qualquer 6" label="label 6">
+                    </optgroup>
+                </p>
+             </select>
+            <p>
+             <label for="textarea">Textarea</label>
+             <textarea name="textarea" id="textearea" rows="8" cols="9">
+                 sdasd
+             </textarea>
+            </p>
+         
+
+            
+        <p>
+            <button type="reset">Apagar</button>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
 </body>
 </html>
