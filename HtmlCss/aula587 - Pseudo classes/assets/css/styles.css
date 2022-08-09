@@ -1,0 +1,52 @@
+.caixa{
+    margin: 0;
+    padding: 0;
+}
+.heading{ /* cria uma animcao ao passar com o cursos por cima*/
+    transition: all 300ms ease-in-out;
+}
+.heading:hover{ /*coloca a cor da animação em vermelho*/
+    background: red;
+}
+a{ /* altera a cor do link*/
+    color: darkgoldenrod;
+}
+a:link{ /* o link que nunca foi visitado fica em verde*/
+    color: green;
+}
+a:visited{ /* o que foi visitado fica a vermelho*/
+    color: red;
+}
+a:hover{ /* quando o cursor do rato fica por cima do link fica com estas specs*/
+    background: darkblue ;
+    color: white;
+    text-decoration: none;
+}
+a:active{ /*o elemento esta ativo , esta a ser "Clicado" */
+    background: darksalmon;
+    color:wheat;
+    text-decoration: none;
+}
+/*
+input:focus{ /*Qunado o elemento esta em foco fica com estas specs
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    outline: none; - restira uma borda extra ja predefinida do browser
+    border: 1px solid black; - borda
+}
+input:disabled{
+    background-color: bisque;
+    cursor: not-allowed;  - o cursor fica com o simbulo de PROIBIDO
+}
+input:enabled{
+    background-color: rgb(63, 52, 39);
+    cursor:progress; - o cursor fica com o simbulo de PROIBIDO 
+} */
+input:checked + p{ /*quando é selecionado a checkbox fica com esta largura e altura */
+    background: red;
+}
+.pai .lista li:last-child{
+    background-color: red;
+}
+input:required{
+    background: yellowgreen;
+}
