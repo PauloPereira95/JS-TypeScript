@@ -1,0 +1,37 @@
+/*ul li::before{
+    content: '-';
+    background: red;
+    color: white;
+    display: block;
+}
+p::first-letter{
+    font-size: 50px;
+    font-size: block;
+    float: left;
+    margin: 0 10px 10px 50px;
+}
+
+p::first-line{
+    background: wheat;
+}
+
+p::selection {
+    background: black;
+    color: white;
+}
+
+.form-field::placeholder{
+    color: red;
+}*/
+
+/*
+ID Classes, Atributos e pseudo-classes Elementos e pseudo-elementos
+1           0                           0
+0           1                           0 
+*/
+#p{
+    background: red;
+}
+.p{
+    background: yellow;
+}

@@ -1,0 +1,25 @@
+ul li::before{
+    content: '-';
+    background: red;
+    color: white;
+    display: block;
+}
+p::first-letter{
+    font-size: 50px;
+    font-size: block;
+    float: left;
+    margin: 0 10px 10px 50px;
+}
+
+p::first-line{
+    background: wheat;
+}
+
+p::selection {
+    background: black;
+    color: white;
+}
+
+.form-field::placeholder{
+    color: red;
+}
