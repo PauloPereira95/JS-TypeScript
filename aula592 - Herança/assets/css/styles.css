@@ -1,0 +1,9 @@
+#Texto{
+    color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+p{
+    font-size: inherit ; /* ativa  a herança*/
+    color: initial; /*desativa  aherança*/
+}
