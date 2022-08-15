@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    font-size: 62.5%; /* este valor em % é para o 1rem equivaler a 10px*/
+    scroll-behavior:smooth;
+}
+
+.pai{
+    width:50rem;
+    height: 100vh;
+    background: yellow;
+}
+.pai > div{
+    width: 50%;
+    height: 50rem;
+    background: blue;
+}
+
+p{
+    /*font-size: 1.6rem;  o rem neste caso equivale a 20px
+                        porque ele basei-se no elemento raiz, o html.
+                     */
+    font-size: 2vmax;
+}
+.color-one{
+    background: teal;
+}
+.color-two{
+    background: turquoise;
+}
+.color-three{
+    background: blue;
+}
