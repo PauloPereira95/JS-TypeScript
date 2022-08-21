@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+}
+
+pai{
+    height: 300vh;
+}
+
+.filha1,.filha2,.filha3{
+  width: 300px;
+  height: 300px ;
+  margin: 10px;
+  background: rgba(255, 0, 0);
+  position: static;
+}
+ .filha2{
+  background: yellowgreen;
+  position: fixed;
+  z-index:1;
+  top: 30%;
+  right: 0;
+  /*position: relative;  é como se o elemento muda-se de camada
+  z-index: 1;*/
+ }
+
+.filha1 {
+  /*z-index: 2;
+
+  position: absolute;  /*é como se o elemento muda-se de camada*/
+  /*position: relative; /*posicao relativa aos elementos*/
+  /* width: auto;
+  height: auto;
+  top :0;       
+  left: 0;        é o mesmo que meter a largura e aaltura a 100%, 
+                  porque aqui estou a mandar a div a esticar-se para ficar a 0 em cima,
+                  baixo, esqeurda e direita 
+  right: 0;
+  bottom: 0; */
+  /*top: 50%;          
+  margin-top: -150px;  /* É uma das maneiras de colocar os
+                          elementos ao centro da tela*/
+  /*margin-left: -150px;/*
+  left: 50%;  */
+}
+.filha3{
+  background: blue;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+.outra{
+  position: absolute;
+  font-size: 50px;
+  background: #fff; 
+  right: 0px;  /*sao 50px do topo do elemento "pai"*/
+  bottom: 0;
+}
+UL{
+  height: 100px;
+  overflow-y: auto;
+}
+
+ul li.sticky{
+  position: sticky;
+  background: green;
+  top:0;
+}
