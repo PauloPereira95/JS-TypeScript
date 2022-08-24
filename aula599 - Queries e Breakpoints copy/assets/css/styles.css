@@ -35,7 +35,7 @@
         width:50%;
     }
  }
- @media all and (min-width:769px) and(max-width: 1200px ){
+ @media all and (min-width:769px) and (max-width: 1200px ){
     .grid .col{
         width: 33.33%;
     }
