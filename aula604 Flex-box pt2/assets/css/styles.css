@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.flex-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    background: yellow;
+    height: 640px;
+    width: 640px;
+    /*gap: 30px;*/
+}
+.flex-item{
+    width: 33.33%;
+    color: white;
+    background: red;
+}
