@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.flex-container{
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    background: yellow;
+    height: 800px;
+    /*gap: 30px;*/
+}
+.flex-item{
+    /*flex-grow: 1;  a porpocao com que adiciona o espaço em branco
+    flex-basis: 320px; tamanho minimo
+    flex-shrink: 0; quanto ele pode diminuir
+        =
+    flex: 1(flex-grow) 1(flex-shrink) 320px(flex-basis);
+    */
+    width: 100%;
+    color: white;
+    background: red;
+    /*margin: 10px;*/
+}
+/*.flex-item:nth-child(3){
+    align-self: flex-end;
+}
+.flex-item:nth-child(4){     ---------> Alinha os Elementos de forma diferente
+    align-self: center;
+}
+.flex-item:nth-child(2){
+    align-self: stretch;
+}*/
+
+.flex-item:nth-child(1){  
+    order: 1; /*  Altera a order com que os elementos sao apresentados, é possivel colocar numeros negativos  */
+}

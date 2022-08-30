@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 24px;
+}
+.two-columns{
+    display: flex;
+}
+            /*     FLEX DENTRO DE OUTRO FLEX        */
+.two-columns .col{
+    display: flex;
+    flex-direction: column;
+    background: orange;
+    margin: 15px;
+    padding: 30px;
+}
+p{
+    margin: 0 0 24px;
+}
+
+.galeria{
+    
+    flex-flow: row wrap;
+    display: flex;
+}
+.galeria .img{
+    flex: 1 0 20%;
+    margin: 10px;
+    height: 50PX;
+    background: blue;
+}
+
