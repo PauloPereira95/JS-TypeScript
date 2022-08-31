@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.grid{
+    max-width: 1200px;
+    margin: 0  auto;
+    display: grid;
+    /*  grid-template-columns: 1fr 1fr 1fr;
+                    ==  
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(320px,1fr));    
+    */ 
+
+    /*
+        grid-template-rows: 2fr 1fr;  
+        a 1º linha 1 fraguemento a 2º linha 2 fraguementos
+    */
+    /* PODEMOS DAR NOME AS COLUNAS  */
+    grid-template-columns: [um] 1fr [dois] 1fr [tres] 1fr [quatro]; 
+    grid-template-rows: [um] 1fr [dois] 1fr [tres] 1fr [quatro] 1fr;
+    gap: 30px;
+
+}
+
+.grid div {
+    background: tomato;
+    min-height: 100px;
+} 
+/*-------- NESTE CASO ESTA UMA LINHA EM CIMA DA OUTRA
+           MAS AO ALTERAR O Z-INDEX PODEMOS MOSTRAR TANTO UMA COMO A OUTRA
+.grid div:nth-child(5),
+.grid div:nth-child(6)
+{
+    background: darkred;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+}
+.grid div:nth-child(5){
+    background: yellow;
+    z-index: 1;
+}
+.grid div:nth-child(6){
+    background:red;
+    z-index: 2;
+}
+*/
+
+/*      PODEMOS UNIR COLUNAS E LINHAS DAS DUAS MANEIRAS ABAXIO SPAN OU COM START E END      */
+.grid div:nth-child(5){
+    background: red; 
+    /*
+        grid-column-start: um;
+        grid-column-end: quatro; 
+                ==
+        grid-column: um / quatro;
+    */
+    /*
+    grid-column:  span um / quatro;
+    grid-row:  span um / quatro;
+    */
+    grid-area:  um/um/quatro/quatro;
+
+    }
