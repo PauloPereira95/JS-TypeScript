@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+
+    
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: auto auto auto; /* Define 2 linhas com o tamanho em automatico*/
+    grid-template-columns: 200px 1fr;   /* Define uma coluna de 200px e de 1 com o restante espaço em branco*/
+    grid-template-areas: /* Define o lugar das areas da GRID*/
+     'header header'
+     'nav main'
+     'rodape rodape'
+     ;
+
+}
+
+.grid div:nth-child(1){
+    background: red;
+    grid-area: header; /* Define o nome da area da GRID*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.grid div:nth-child(2){
+    background: yellow;
+    grid-area: nav; /* Define o nome da area da GRID*/
+}
+
+.grid ul li{
+    list-style-type: none;
+}
+.grid div:nth-child(3){
+    background: violet;
+    grid-area: main; /* Define o nome da area da GRID*/
+}
+
+.grid div:nth-child(4){
+    background: wheat;
+    grid-area: rodape; /* Define o nome da area da GRID*/
+}
+
+@media(max-width:768px){ /* Ajusta a GRID para displays mais pequenos*/
+    .grid{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+         'header'
+         'main'
+         'nav'
+         'rodape'
+         ;
+    
+    }
+    
+}

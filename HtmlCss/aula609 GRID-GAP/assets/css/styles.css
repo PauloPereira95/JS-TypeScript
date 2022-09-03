@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+.grid{
+    width: calc(100% + 30px);
+    /*margin-right: -30px;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    /*gap: 30px;
+    
+        Podemos fazer das duas formas
+    row-gap:30px;           
+                        == gap: 30px; Ou gap: 30px 80px;
+                                        30px de espaço para linhas
+                                        80px de espaço para colunas
+    column-gap:30px;
+    */
+}
+
+.grid div {
+    background: tomato;
+    min-height: 100px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.grid div:nth-child(5){
+    background: red;
+}
