@@ -1,0 +1,13 @@
+<section class="main-bg section">
+    <div class="main-content">
+      <h1>Lorem</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis eos placeat esse deserunt expedita ex quo excepturi harum dignissimos, minus laudantium numquam reprehenderit quaerat assumenda iusto id eligendi provident beatae!</p>
+    </div>
+  </section>
+
+  <section class="white-bg section">
+    <div class="main-content">
+      <h1>Lorem</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis eos placeat esse deserunt expedita ex quo excepturi harum dignissimos, minus laudantium numquam reprehenderit quaerat assumenda iusto id eligendi provident beatae!</p>
+    </div>
+  </section>
