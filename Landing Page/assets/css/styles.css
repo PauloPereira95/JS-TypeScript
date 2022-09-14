@@ -11,6 +11,7 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 /*Alterações Body e MENU -------------- */
 body{
@@ -35,7 +36,10 @@ h1{
 }
 
 h2{
-    font-size: 5.5rem;
+    font-size: 6rem;
+    margin-bottom: 5rem; /*acrscent amargin em baixo para criar espaço entre o titulo e o texto*/
+    text-transform: uppercase; /*Coloca o texto tudo em maiusculas*/
+    line-height: 1.2; /*Coloca o espaçamento de 1.2 nas linhas do titulo*/
 }
 
 h3{
@@ -56,9 +60,13 @@ h6{
 a{
     text-decoration: none;
 }
+p{
+    margin-bottom: 3rem;
+}
 
 .white-bg{
     background: var(--white-color);
+    color: var(--primary-color);
 }
 
 .main-bg{
@@ -68,7 +76,7 @@ a{
     color: var(--white-color);
 }
 
-.main-content{
+.main-content{ /*ESTRUTA O CONTEUDO, ESPALAMENTOS ETC*/
     max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
@@ -92,21 +100,21 @@ a{
     
 }
 .menu-spacing{
-    height: 6.5rem;
+    height: 6.5rem; /* 64px altura do menu mais 1px da borda*/
 }
 
-.menu-content{
+.menu-content{ /*spera o logo dos menus*/
     display: flex;
     justify-content: space-between;
 }
-.menu h1 { 
+.menu h1 { /**tamanho do titulo + cor */
     font-size: 2.3rem;
     color: var(--primary-color);
 }
-.menu h1 a {
+.menu h1 a { /*Link erda o branco do pai*/
     color: inherit;
 }
-.menu ul{
+.menu ul{ /*tira as bolas e define como display flex*/
     list-style: none;
     display: flex;
 }
@@ -117,7 +125,7 @@ a{
     position: relative;
 
 }
-.menu ul li a::after{
+.menu ul li a::after{ /* Animação da linha quando o cursor esta por cima*/
     content: '';
     position: absolute;
     bottom: 1rem;
@@ -136,28 +144,32 @@ a{
 /*-----------------------------------------*/
 
 /* --------SESSAO 1 INTRO-----------------*/
-.intro-content{
+.intro-content{ /*Cria uma grid para colocar o texto e a imagem*/
     position: relative;
-    top: -8rem;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: var(--gap);
+    top: -8rem; /*puxa o conteudo ligeiramente oara cima*/
+    display: grid; /*Cria a GRID*/
+    grid-template-columns: 1fr 1.5fr; /*Cria as colunas da GRID*/
+    gap: var(--gap); /*Dá um espalamento entre colunas*/
     height: 100vh; /*A GRID FICA COM O TAMANHO DA SECTION*/
 }
-.intro-text-content, .intro-img{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-}
-
-.intro-text-content h2{
-    font-size: 6rem;
-    margin-bottom: 5rem;
-    text-transform: uppercase;
-    line-height: 1.2; /*Coloca o espaçamento de 1.2 nas linhas do titulo*/
+.intro-text-content, .intro-img{ /*Cria flexbox dentro da coluna da GRID para poder alinhar ao centro*/
+                    /*.intro-img tambem precisa de ser uma flebox dentro da coluna para ficar alinhada*/
+    display: flex; /*cria flexbox dentro da coluna da GRID*/
+    flex-flow: column wrap; /* une colunas e define o sentido da flexbox como coluna como eixo principal*/
+    justify-content: center; /* alinha ao centro*/
 }
 .intro-img img{  /* Renderiza a imgem para ficar com o tamanho certo*/
     max-width: 100%;
     height: auto;
+}
+/*-------------------------------------*/
+/*----------"TOP 3(about opera)"-------*/
+.top3-content{ /**/
+    max-width: 64rem;
+    display: flex; /*Define como display flex para poder alinhar ao centro*/
+    flex-flow: column wrap; /*Muda a direção do eixo principal*/
+    justify-content: center; /* alinha ao centro em aultura*/
+    height: 100vh; /*DIV com o tamnho da janela*/
+    text-align: center;
 }
 /*-------------------------------------*/
