@@ -327,4 +327,90 @@ body .full-width{
     margin: 0;
     padding: 3rem;
 }
+.close-menu{ /*menu mobile*/
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top:0;
+    left:0;
+}
+.back-to-top{ /*menu para voltar para o topo*/
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transform: rotate(-90deg); /*roda a seta*/
+    border: 0.1rem solid var(--primary-color);
+
+}
 /*--------------------------------------*/
+/*---------MEDIA QUEIRIES---------------*/
+@media (max-width: 800px){ /*Aos 800px de largura a GRID da intro fica apenas com 1 coluna*/
+    .intro-content, .grid{
+        grid-template-columns: 1fr;
+    }
+    .gallery-img{
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .gallery-img img{
+        width: 100%;
+    }
+    .grid-one-content{
+        display: block;
+    }
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+    /*-----MENU MOBILE----------------------*/
+    .menu-content, .menu-content ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*--------------------------------------*/
+    /*-----------Menu mobile------------------*/
+    .menu-content{
+        height: 100vh;
+    }
+    .menu{
+        display: none;
+    }
+  
+    .close-menu-label::after{
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    /* × */
+    .close-menu:checked~.menu{
+        display: block;
+    }
+    .close-menu:checked~.close-menu-label:after{
+        content: '×';
+    }
+    .menu-spacing{
+        display: none; /* 64px altura do menu mais 1px da borda*/
+    }
+    /*--------------------------------------*/
+
+}

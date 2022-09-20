@@ -16,14 +16,17 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <input id="close-menu" class="close-menu" type="checkbox" aria-label="close menu" role="button">
+  <!-- aria-label="close menu" role="button", apenas serve para o leitor(audio) dizer que é um botao para fechar o menu-->
+  <label class="close-menu-label" for="close-menu" title="close-menu"></label>
   <aside class="menu white-bg"> <!--MENU para dizer o que é a pagina, main-content para di<we que tem um conteudo-->
     <div class="main-content menu-content">
       <h1>
-        <a href="#home">LOGO</a>
+        <a href="#home" onclick="getElementById('close-menu').checked = false">LOGO</a>
       </h1>
 
       <nav>
-        <ul>
+        <ul onclick="getElementById('close-menu').checked = false;"> <!-- Faz com que o menu feche ao clicar num link do menu-->
           <li><a href="#intro">intro</a></li>
           <li><a href="#grid-one">Grid One</a></li>
           <li><a href="#gallery">Gallery</a></li>
@@ -290,5 +293,6 @@
   <footer class=" footer white-bg" id="footer">
     <p><a rel="nofollow" target="_blank" href="">Feito com <span class="heart">&#9829;</span> por Paulo Pereira </a></p>
   </footer>
+  <a href="#home" class="back-to-top">➤</a>
 </body>
 </html>
