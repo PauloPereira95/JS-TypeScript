@@ -29,7 +29,7 @@ let alunos = ['Luiz','Maria','João'];
 console.log(alunos);
 console.log(removido); */
 
-/*const removido = alunos.shift();
+/*const removido = alunos.shift();// apaga o registo que esta na ultima posição
 console.log(removido);
 console.log(alunos);`*/
 
