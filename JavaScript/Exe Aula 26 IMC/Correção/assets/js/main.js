@@ -15,6 +15,11 @@ form.addEventListener('submit', function (e) { // parar o refresh, adiciona um e
     console.log(peso, altura);
     //------------------------------------------------------------
     //------------------Verifica se os dados dos input são Numbers
+    
+    if (!altura && !peso) {
+        setResultado('Altura e Peso Inválidos',false);
+        return
+    }
     if (!peso) { // se o peso for falso, ou seja for avalidado como falso, nao sendo um numero
         setResultado('Peso Invalido', false); // o false é para determinar o estilo  e conteudo da mensagem
         return; // O return é da função de cima de parar o Refresh
