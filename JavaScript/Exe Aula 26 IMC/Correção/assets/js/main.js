@@ -27,7 +27,7 @@ form.addEventListener('submit', function (e) { // parar o refresh, adiciona um e
     let nivelImc= getNivelImc(imc);
     let msg = `O seu imc é ${imc} (${nivelImc}).`;
     setResultado(msg,true);
-    
+
     //console.log(imc,nivelImc);
     //console.log('Cheguei aqui...');
     ;
@@ -63,7 +63,7 @@ function setResultado(msg, isValid /*Se for valido*/) { // Função para mostrar
         p.classList.add('error')
     }
 
-    p.innerHTML = msg; // Adicona a mensagem no html no p
+    p.innerHTML = msg; // Adicona a mensagem no p
     resultado.appendChild(p); // adciona um elemnto filho na divResultado, neste caso o p
 
 }
