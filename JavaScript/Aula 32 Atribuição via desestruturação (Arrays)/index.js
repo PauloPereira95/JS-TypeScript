@@ -13,6 +13,7 @@ console.log(a,b,c);
 /*const numeros = [1000, 2000, 3000, 4000, 5000, 6000, 700, 80, 90];
 //const [um, dois, tres,...resto] = numeros; // seleciona o 1º e 2º elemento e colocas nas variaveis
 // os ... faz com que a variavel resto receba o resto do array
+
 const [um, , tres , , cinco , , sete ] = numeros;
 console.log(um,tres , cinco);
 */
