@@ -1,4 +1,4 @@
-let container = document.querySelector('.container');
+const container = document.querySelector('.container');
 const div = document.createElement('div');
 const elementos = [
     {tag:'p', texto: 'Frase 1'},
