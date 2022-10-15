@@ -16,7 +16,7 @@ function random(min,max) {
  */
  const min = 1;
  const max = 50;
- let rand = 10;
+ //let rand = 10;
 do {
     rand = random(min,max);
     console.log(rand);
