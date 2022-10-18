@@ -5,15 +5,21 @@ let reset = document.querySelector('.reset');
 let totalSec = 0;
 let timer;
 iniciar.addEventListener('click', function (event) {
+    relogio.classList.remove('pausa');
+    relogio.classList.add('relogio');
     relogio.style.color = 'black'; // coloca o texto em branco
     inicTimer();
 });
 pausar.addEventListener('click', function (event) {
     clearInterval(timer);
-    relogio.style.color = 'rgb(235, 180, 31)'; // coloca o texto em branco
+    relogio.style.color = 'rgb(235, 180, 31)'; // coloca o texto em brancoa
+    relogio.classList.remove('relogio');
+    relogio.classList.add('pausa');
 
 });
 reset.addEventListener('click', function () {
+    relogio.classList.remove('pausa');
+    relogio.classList.add('relogio');
     clearInterval(timer);
     relogio.style.color = 'red'; // coloca o texto em branco
     relogio.innerHTML = '00:00:00';
@@ -28,8 +34,8 @@ function inicTimer() {
 
         totalSec++;
         let sec = parseInt(totalSec % 60);
-        let min = Math.floor(totalSec / 60 % 60)
-        let horas = Math.floor(totalSec / 3600)
+        let min = Math.floor(totalSec / 60 % 60);
+        let horas = Math.floor(totalSec / 3600);
         // adiciona os zeros caso o valor seja apenas de 1 digito
         /**
          * Para que isso aconteça tem que se tranformar as variaveis em string
