@@ -5,6 +5,8 @@ let reset = document.querySelector('.reset');
 let totalSec = 0;
 let timer;
 iniciar.addEventListener('click', function (event) {
+    clearInterval(timer);
+
     relogio.classList.remove('pausa');
     relogio.classList.add('relogio');
     relogio.style.color = 'black'; // coloca o texto em branco
