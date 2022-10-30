@@ -32,7 +32,7 @@ function fizzBuzz(num) {
     if ( num % 5 === 0) return 'Buzz';
     return num
 }
-console.log('a', fizzBuzz('a'));
+console.log('a', fizzBuzz());
 for(let i = 0; i <= 100; i++){
     console.log(i,fizzBuzz(i))
 }
