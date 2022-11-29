@@ -47,7 +47,7 @@ function criaCalculadora() {
             document.addEventListener('click', e => { //arrow function AS ARROW FUNTION NAO MUDAM O COMPORTAMENTO DO THIS
                 // Ao utilizar a arrow function no addEventListener
                 // o this será sempre o document e fora da função sera a calculadora
-                let el = e.target;
+                let el = e.target; // o que esta a ser clicado
                 if (el.classList.contains('btn-num')) { // se o que for clicado contiver a classe btn-num 
                     this.btnParaDisplay(el.innerText);
 
