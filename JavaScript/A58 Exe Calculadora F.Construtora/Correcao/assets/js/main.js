@@ -1,72 +1,44 @@
-// o objeto da função tem acesso a atudo o que esta na função
-function criaCalculadora() {
-
-    return {
-        //---ATRIBUTOS----------
-        display: document.querySelector('.display'),
-        btnClear: document.querySelector('.btn-clear'),
-
-        //---- METODOS----------------
-        incia() {
-            //alert('ola');
-            this.clickBotoes();
-            this.pressEnter();
-        },
-        pressEnter() {
-            this.display.addEventListener('keyup', e => {
-                if (e.keyCode === 13) {
-                  this.realizaConta();
-                }
-              });    
-        },
-        clearDisplay() {
-            this.display.value = '';
-        },
-
-        apagaUm() {
-            this.display.value = this.display.value.slice(0, -1); // apaga apenas um caracter, (tamanho da string, -1)
-        },
-        realizaConta() {
-            let conta = this.display.value;
-            try {
-                conta = eval(conta); // MUITO CUIDADO COM O EVAL
-                // permite que tudo que seja escrito no input 
-                //seja executado como se fosse codigo js
-                if (!conta) {
-                    alert('Conta Invalida!')
-                    return;
-                }
-                this.display.value = String(conta);
-            } catch (e) {
-                alert('Conta Invalida!');
+function Calculadora(){
+    this.display = document.querySelector('.display');
+    this.incia = () => {
+        this.capturaCliques();
+        this.capturaEnter();
+    };
+    this.capturaEnter = () => {
+        document.addEventListener('keypress', e => {
+            if(e.keyCode !==13) return;
+            this.realizaConta();
+        });
+    }
+    this.capturaCliques = () =>{
+        document.addEventListener('click', e => {
+            let el = e.target;
+            if(el.classList.contains('btn-num')) this.addNumDisplay(el);
+            if(el.classList.contains('btn-clear')) this.clear(el);
+            if(el.classList.contains('btn-del')) this.del(el);
+            if(el.classList.contains('btn-eq')) this.realizaConta(el);
+        });
+    };
+    this.addNumDisplay = el => {
+        this.display.value += el.innerText;// arrow function
+        this.display.focus(); // mete o focu no display
+    }
+    this.clear = () => this.display.value = '';
+    this.del = () => this.display.value = this.display.value.slice(0,-1);
+    this.realizaConta = () => {
+        try {
+            let conta = eval(this.display.value);
+            if (!conta){
+                alert('conta invalida 1')
                 return;
             }
-        },
-        clickBotoes() {
-            // this -> Calculadora (objeto)
-            document.addEventListener('click', e => { //arrow function AS ARROW FUNTION NAO MUDAM O COMPORTAMENTO DO THIS, vai ser sempre quem criou o objeto
-                // Ao utilizar a arrow function no addEventListener
-                // o this será sempre o document e fora da função sera a calculadora
-                let el = e.target; // o que esta a ser clicado
-                if (el.classList.contains('btn-num')) { // se o que for clicado contiver a classe btn-num 
-                    // this -> document
-                    this.btnParaDisplay(el.innerText);
-
-                }
-                if (el.classList.contains('btn-clear')) this.clearDisplay(); // limpa o iunput
-                if (el.classList.contains('btn-del')) this.apagaUm(); // limpa o iunput
-                if (el.classList.contains('btn-eq')) this.realizaConta();
-
-
-            }); // altera o comportamento do this. em vez de usar o this da função usa o meu this(calculadora)
-        },
-        btnParaDisplay(valor) {
-            this.display.value += valor;
-        },
-
-
-
+            this.display.value = conta;
+        }catch {
+            alert('conta invalida 2');
+            return;
+        }
     };
-}
-let calculadora = criaCalculadora();
+
+};
+let calculadora = new Calculadora();
 calculadora.incia();
