@@ -5,6 +5,6 @@ const a2 = [4,5,6];
 //------------
 // operador rest ... (spread)
 const a3 = [...a1,...a2];
-
+//
 
 console.log(a3);
