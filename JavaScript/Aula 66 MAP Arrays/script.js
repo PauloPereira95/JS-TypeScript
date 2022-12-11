@@ -1,4 +1,4 @@
-// Map - Altera valores do array mas nao altera o seu tamanho
+// Map - Altera valores do array, filtra e adiciona
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
 // Dobrar os numeros
 const arrayDobro = numeros.map(valor => valor * 2);
