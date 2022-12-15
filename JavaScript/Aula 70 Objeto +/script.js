@@ -1,11 +1,15 @@
+// literal da string é ''
+
 const pessoa = {
-    nome: 'Paulo',
-    sobreNome: 'Pereira'
+    nome: 'Paulo', // nome é a chave
+    sobreNome: 'Pereira' // sobrenome é a chave
 };
 console.log(pessoa.nome, pessoa.sobreNome);
 // ---------------------OU------------------
+// anotação de parentises retos
 console.log(pessoa['nome'], pessoa['sobreNome']);
 // --------------- OU ---------------------
+// aceder de forma dinamica
 const chave = 'nome';
 console.log(pessoa[chave]); 
 //-------------------------------------------
@@ -16,22 +20,27 @@ pessoa1.nome = 'luiz';
 pessoa1.sobreNome = 'perez';
 pessoa1.idade = 2;
 //console.log(pessoa1.nome, pessoa1.sobreNome);
+
 // Apagar a chave nome
 delete pessoa1.nome;
 console.log(pessoa1)
+
 // Metodos-----------------------------------------
+// Métodos são funcoes que estão dentro do objeto que executam acoes
+// UMa das vantagens é ter acesso as coisas do objeto dentro da função
 pessoa1.falarNome = function () {
    return console.log(`${this.sobreNome} esta a dizer o seu sobrenome`);
 };
 pessoa1.getDataNasc = function(){
-    let dataAtual = new Date();
+    let dataAtual = new Date(); // construtor
     return dataAtual.getFullYear() - this.idade;
 }
 pessoa1.falarNome();
-console.log(pessoa1.getDataNasc());
+console.log('ano de nasc: ',pessoa1.getDataNasc()); 
+
 // for in
 for (let key in pessoa1) {
-    console.log(pessoa1[key]);
+    console.log(pessoa1[key]); // ver oo valor da chave
 } 
 // "Molde para cirar objetos"
 // factory function ,Construtor function, Classes
@@ -41,7 +50,7 @@ function criaPessoa(nome,sobrenome) {
         nome,
         sobrenome,
         nomeCompleto(){
-            return `${this.nome} ${this.sobrenome}`;
+            return `nome completo :${this.nome} ${this.sobrenome}`;
         }
     }
 }
@@ -54,8 +63,13 @@ console.log(p1.nomeCompleto());
 function Pessoa(nome,sobreNome) {
     this.nome = nome;
     this.sobreNome = sobreNome;
+    this.nomeCompleto2 = function(){
+        console.log(`nome completo 2 : ${this.nome} ${this.sobreNome}`)
+    };
 }
+
 const p2 = new Pessoa('luiz','otavio');
 console.log(p2);
+p2.nomeCompleto2();
 // parar o objeto nao deixar alterar
 Object.freeze(this);
