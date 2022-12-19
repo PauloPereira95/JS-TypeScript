@@ -38,7 +38,7 @@ function Produto2(nome,preco,stock) {
         nome: {
             enumerable: true, // é exibido quando der print do objeto
             value: nome, // o valor é o valor da propriedade stock
-            writable: true,  // o valor nao pode ser alterado
+            writable: true,  // o valor pode ser alterado
             configurable: true // a propriedade é configuravel / apagar / editar / reconfigurar
         },
         preco : {
