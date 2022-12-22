@@ -13,6 +13,7 @@ Object.defineProperty (define uma propriedade)
 
 // ------ COPIAR OBJETO ------------------------------
 let produto = { nome: 'caneca', preco: 1.8 };
+
 // o outraCoisa desta forma apenas tem os valores copiados e nao linkados
 //let outraCoisa = { ...produto };
 
