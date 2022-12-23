@@ -12,9 +12,10 @@
     que vem da propriedade prototype da função construtora que foi 
     usada para cria-lo.
     Quando tentamos aceder a um menbro de um objeto, primeiro o motor do JS
-    vai tentar encontrar este mebro no proprio objeto e depois a cadeia de 
+    vai tentar encontrar este menbro no proprio objeto e depois a cadeia de 
     prototipos é usda até ao topo (null) ate encontrar (ou não) tal membro.
  */
+// função construtora
 function Pessoa (nome,sobrenome){
     this.nome = nome;
     this.sobrenome = sobrenome;
