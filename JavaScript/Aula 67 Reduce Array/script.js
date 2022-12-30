@@ -1,7 +1,7 @@
 // Reduz o array
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
 // Retornar o total
-let total = numeros.reduce(function (acumulador, valor, indice, array) {
+let total = numeros.reduce(function (acumulador, valor) {
     acumulador += valor;
     return acumulador;
 }, 0); // valor incial do acumulador
