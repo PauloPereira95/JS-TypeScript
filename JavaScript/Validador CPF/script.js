@@ -61,5 +61,5 @@ function ValidaCPF(cpfEnviado) {
     console.log('Cpf válido');
   } else {
     console.log('Cpf inválido');
-  }
+}
   
