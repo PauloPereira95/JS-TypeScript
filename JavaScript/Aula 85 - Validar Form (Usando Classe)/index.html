@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>Form de Registo</h1>
+      <ul>
+        <li>Nenhum campo pode estar vazio!</li>
+        <li>O utilizador só podera conter letras e/ou números</li>
+        <li>O utilizador deverá ter entre 3 e 12 caracteres</li>
+        <li>A senha precisa ter entre 6 e 12 caracteres</li>
+      </ul>
+      <form action="/" method="POST" class="formulario">
+        <label>Nome</label>
+        <input type="text" class="nome validar" />
+        <label>Sobre Nome</label>
+        <input type="text" class="sobrenome validar" />
+        <label>CPF</label>
+        <input type="text" class="cpf validar" />
+        <label>Usuário</label>
+        <input type="text" class="user validar" />
+        <label>Senha</label>
+        <input type="password" class="senha validar" />
+        <label>Repetir Senha</label>
+        <input type="password" class="repetir-senha validar" />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    <script src="./assets/main.js"></script>
+    <script src="./assets/validador_cpf.js"></script>
+  </body>
+</html>
